@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">seena task</string>
+    <string name="title">Title</string>
+    <string name="published_by">Published By</string>
+    <string name="summary">Summary</string>
+    <string name="date">Date</string>
+</resources>
