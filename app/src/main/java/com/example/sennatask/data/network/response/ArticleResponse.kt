@@ -24,13 +24,13 @@ data class Result(
         val summary:String,
 
 
-        val media:List<Media>
+        val media:List<Media>?
 )
 
 data class Media(
 
         @SerializedName("media-metadata")
-        val mediaMetadata:List<MediaMetaData>
+        val mediaMetadata:List<MediaMetaData>?
 )
 
 data class MediaMetaData(

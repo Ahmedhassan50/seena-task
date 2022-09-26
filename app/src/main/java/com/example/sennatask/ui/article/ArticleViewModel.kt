@@ -42,7 +42,7 @@ constructor (private val articleRepository: ArticleRepository):ViewModel() {
                        publishedBy = result.publishedBy,
                        publishedDate = result.publishedDate,
                        summary = result.summary,
-                       image = result.media[0].mediaMetadata[2].url
+                       image = result.media?.getOrNull(0)?.mediaMetadata?.getOrNull(2)?.url
                    )
                    article
                }

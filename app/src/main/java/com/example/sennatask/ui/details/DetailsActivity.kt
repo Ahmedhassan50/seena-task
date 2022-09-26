@@ -43,14 +43,20 @@ class DetailsActivity : AppCompatActivity() {
 
 
 
-    private fun zoomImageFromThumb(thumbView: View, url: String) {
+    private fun zoomImageFromThumb(thumbView: View, url: String?) {
         // If there's an animation in progress, cancel it
         // immediately and proceed with this one.
         currentAnimator?.cancel()
 
         // Load the high-resolution "zoomed-in" image.
         val expandedImageView: ImageView = findViewById(R.id.expanded_image)
-        Glide.with(this).load(url).into(expandedImageView)
+
+        if(url!=null){
+            Glide.with(this).load(url).error(R.drawable.plain_white_background).into(expandedImageView)
+        }else{
+            expandedImageView.setImageResource(R.drawable.plain_white_background)
+        }
+
 
 
         // Calculate the starting and ending bounds for the zoomed-in image.

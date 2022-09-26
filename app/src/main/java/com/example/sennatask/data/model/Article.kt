@@ -11,6 +11,6 @@ data class Article(
     val publishedBy:String,
     val publishedDate:String,
     val summary:String,
-    val image:String
+    val image:String?
 
 ): Parcelable

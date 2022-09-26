@@ -14,6 +14,8 @@ fun setImageUrl(imageView: ImageView,url:String?){
             .placeholder(R.drawable.plain_white_background)
             .error(R.drawable.plain_white_background)
             .into(imageView)
+    }else{
+        imageView.setImageResource(R.drawable.plain_white_background)
     }
 
 }
